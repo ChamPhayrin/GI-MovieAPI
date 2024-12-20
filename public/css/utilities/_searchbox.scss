@@ -1,0 +1,42 @@
+@use '../abstracts/index' as a;
+@use '../basics/index' as b;
+@use '../abstracts/variables' as v;
+
+#search-form-input{
+  width: auto;
+  height: a.toRem(30);
+  line-height: a.toRem(28);
+  padding: 0 a.toRem(16);
+  padding-left: a.toRem(30);
+  border: a.toRem(2) solid transparent;
+  border-radius: a.toRem(8);
+  outline: none;
+  background-color: rgba(132, 132, 132, 0.138);
+  color: v.$black-color;
+  transition: 0.3s ease-in-out;
+  margin-right: a.toRem(5);
+  &::placeholder {
+    color: #9e9ea7;
+  }
+  &:hover, :focus{
+    outline: none;
+    border-color: v.$secondary-color;
+    background-color: v.$white-color;
+  }
+}
+
+@media (max-width: 768px) {
+  #search{
+    height: 15vh;
+    margin-bottom: 30px;
+    &-container{
+      gap: 20px;
+      @include a.flex(column-reverse, center, space-evenly)
+    }
+    &-form{
+      @include a.flex(column, flex-start, center);
+      gap: 10px;
+      width: 100%;
+    }
+  }
+}

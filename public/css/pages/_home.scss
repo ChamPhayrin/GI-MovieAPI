@@ -1,0 +1,38 @@
+@use '../abstracts/index' as a;
+@use '../basics/index' as b;
+
+
+#search{
+  width: 100%;
+  padding: a.toRem(40);
+  &-container{
+    @include a.flex(row, space-between, center);
+    @include b.text-header(18)
+  }
+  &-form{
+    width: 40%;
+    @include a.flex(row, center, center);
+    letter-spacing: 0;
+    &-input{
+      margin: 0 a.toRem(3) 0 a.toRem(10);
+    }
+  }
+  &-title{
+    @include b.text-header(30)
+  }
+}
+
+.hidden{
+  display: none!important;
+}
+
+
+@media (max-width: 768px) {
+  #movie{
+    @include a.flex(column)
+  }
+}
+
+
+
+

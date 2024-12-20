@@ -1,0 +1,66 @@
+@use '../abstracts/index' as a;
+@use '../basics/index' as b;
+@use '../abstracts//variables' as v;
+
+
+#movie{
+  min-height: 60vh;
+  width: 100%;
+  @include a.flex(row, space-evenly, center);
+  &-card{
+    width: 50%;
+    @include a.flex(column, flex-end, left);
+    min-height: 45vh;
+    background-image: url('/img/dehum7q-cc2ecb8a-8b7d-41dc-a504-7be961dfc101.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: a.toRem(40);
+    padding: a.toRem(30);
+    transition: ease-in-out .3s all;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    &-content{
+      backdrop-filter: blur(10px);
+      width: 50%;
+      border-radius: a.toRem(10);
+    }
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: rgba(0, 0, 0, 0.319) 0px 3px 6px, rgba(0, 0, 0, 0.446) 0px 3px 6px;
+    }
+  }
+  &-title{
+    @include b.text-header(30);
+    padding: a.toRem(10) 0;
+  }
+  &-date{
+    @include b.text-paragraph(15);
+    color: v.$white-color;
+  }
+  &-overview{
+    @include b.text-paragraph(15);
+    color: v.$white-color;
+    width: 60%;
+    padding: a.toRem(10) 0;
+  }
+
+  &-error{
+    width: auto;
+    height: auto;
+    &-title{
+      @include b.text-header(40);
+    }
+    &-paragraph{
+      @include b.text-paragraph(20);
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  #movie{
+    @include a.flex(column, center, center);
+    &-card{
+      width: 80%;
+    }
+  }
+}

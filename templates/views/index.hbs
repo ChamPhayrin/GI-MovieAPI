@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <title>{{title}}</title>
+</head>
+<body>
+  {{>header}}
+  <main class="container">
+    <section id="search">
+      <div id="search-container">
+        <h2 id="search-title">My Movie:</h2>
+        <form id="search-form">
+          <label for="search-form-label" id="search-form-label">Search Movie:</label>
+          <input type="text" id="search-form-input" placeholder="Search...">
+          <button type="submit" id="search-form-button">search</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="movie">
+      <div id="movie-card" class="hidden">
+      </div>
+      <div id="movie-error" class="hidden">
+        <h4 id="movie-error-title">Error:</h4>
+        <p id="movie-error-paragraph"></p>
+      </div>
+        <section id="reccomended" class="hidden">
+        <h4 id="reccomended-title">Reccomended Movies</h4>
+        <ul id="reccomended-list" >
+        </ul>
+      </section>
+    </section>
+
+  </main>
+
+  <script type="module" src="/js/client.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@use '../abstracts/index' as a;
+@use '../basics/index' as b;
+@use '../abstracts/variables' as v;
+
+
+button {
+  display: inline-block;
+  padding: 0 a.toRem(5);
+  text-align: center;
+  text-decoration: none;
+  border-radius: a.toRem(8);
+  border: a.toRem(8) solid transparent;
+  background-color: v.$secondary-color;
+  color: v.$white-color;
+  cursor: pointer;
+  box-shadow: 0 a.toRem(4) a.toRem(8) rgba(0, 0, 0, 0.1);
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    background-color: v.$primary-color;
+    box-shadow: 0 a.toRem(4) a.toRem(8) rgba(0, 0, 0, 0.1);
+  }
+}

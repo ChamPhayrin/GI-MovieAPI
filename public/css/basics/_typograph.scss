@@ -1,0 +1,34 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as v;
+
+
+// FONTS IMPORTS  
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Baskervville+SC&family=Gamja+Flower&family=Leckerli+One&family=Marck+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Baskervville+SC&family=Bonbon&family=Gamja+Flower&family=Leckerli+One&family=Marck+Script&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+//FONT VARIABLES
+$poppins: "Poppins", serif;
+$bonbon: "Bonbon", serif;
+
+
+@mixin text-basic(){
+  font-family: $poppins;
+  font-size: toRem(16);
+}
+
+@mixin text-title ($size: 30) {
+  font-family: $poppins;
+  font-size: toRem($size);
+  font-weight: 700;
+  letter-spacing: toRem(3);
+  color: v.$text-title-color;
+}
+@mixin text-header ($size: 30) {
+  font-size: toRem($size);
+  font-weight: 450;
+  letter-spacing: toRem(2);
+  color: v.$text-title-color;
+}
+@mixin text-paragraph ($size: 30) {
+  font-size: toRem($size);
+  letter-spacing: toRem(1);
+}
