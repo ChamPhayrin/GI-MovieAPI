@@ -36,7 +36,7 @@ searchbar.addEventListener('keyup', (e) => {
     return
   }
 
-  fetch(`http://localhost:3000/search?movie=${movie}`).then((res) =>{
+  fetch(`/search?movie=${movie}`).then((res) =>{
     res.json().then(data  => {
 
       if(data.errorMesssage){
