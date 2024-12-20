@@ -125,15 +125,6 @@ body main.container {
   display: none !important;
 }
 
-@media (max-width: 768px) {
-  #movie {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
-}
 button {
   display: inline-block;
   padding: 0 0.3125rem;
@@ -221,7 +212,7 @@ button:active {
   align-content: left;
   min-height: 45vh;
   background-image: url("/img/dehum7q-cc2ecb8a-8b7d-41dc-a504-7be961dfc101.png");
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
   border-radius: 2.5rem;
   padding: 1.875rem;
@@ -282,6 +273,7 @@ button:active {
   }
   #movie-card {
     width: 80%;
+    margin-top: 100px;
   }
 }
 #reccomended {

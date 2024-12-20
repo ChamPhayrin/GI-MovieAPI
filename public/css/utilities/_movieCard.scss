@@ -12,7 +12,7 @@
     @include a.flex(column, flex-end, left);
     min-height: 45vh;
     background-image: url('/img/dehum7q-cc2ecb8a-8b7d-41dc-a504-7be961dfc101.png');
-    background-position: center;
+    background-position: cover;
     background-repeat: no-repeat;
     border-radius: a.toRem(40);
     padding: a.toRem(30);
@@ -61,6 +61,7 @@
     @include a.flex(column, center, center);
     &-card{
       width: 80%;
+      margin-top: 100px;
     }
   }
 }
